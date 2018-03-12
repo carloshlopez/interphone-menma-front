@@ -143,6 +143,7 @@ export class CallService {
 
 	// place a new call
 	public triggerCall(contact) {
+		console.log("Trying call to", contact);
 		this.audio.play('calling');
 		this.showModal();
 		if (this.isInCall) {
@@ -266,23 +267,25 @@ export class CallService {
 		console.log('calling ' + contactId + ', isInitiator: ' + isInitiator);
 
 		var connect = () => {
+			console.log("this.peerConnectionConfig", this.peerConnectionConfig);
 			this.peerConnection = new RTCPeerConnection(this.peerConnectionConfig);
 
 			this.peerConnection.onicecandidate = this.gotIceCandidate.bind(this);
 			this.peerConnection.onaddstream = this.gotRemoteStream.bind(this);
 			this.peerConnection.oniceconnectionstatechange = event => {
 				this.lastState = event.target.iceConnectionState;
-				console.debug('ice state', this.lastState);
+				console.log('ice state', this.lastState);
 				if (this.lastState === 'failed' || this.lastState === 'disconnected' || this.lastState === 'closed') {
 					this.peerConnection = null;
 					this.end();
 				}
 			};
+			console.log("this.localStream", this.localStream);
 			this.peerConnection.addStream(this.localStream);
 
 			if (isInitiator) {
 				//this.isCalling = true;
-				console.debug('creating offer');
+				console.log('creating offer');
 				this.peerConnection.createOffer(d => {
 					//this.gotDescription.call(this, [d]);
 					this.gotDescription(d);
