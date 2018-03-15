@@ -6,7 +6,7 @@
 			</button>
 		</ion-buttons>
 		<ion-title>
-			Chats
+			Interphone
 		</ion-title>
 		<ion-buttons end>
 			<button (click)="account()" ion-button icon-only>
@@ -15,8 +15,69 @@
 		</ion-buttons>
 	</ion-navbar>
 </ion-header>
-
 <ion-content padding>
+	<ion-list>
+	  <ion-list-header>
+	    Torre 1
+	  </ion-list-header>
+	  <ion-item>101</ion-item>
+	  <ion-item>102</ion-item>
+	  <ion-item>103</ion-item>
+		<ion-item>104</ion-item>
+	  <ion-item>105</ion-item>
+	  <ion-item>106</ion-item>
+		<ion-item>201</ion-item>
+	  <ion-item>202</ion-item>
+	  <ion-item>203</ion-item>
+		<ion-item>204</ion-item>
+	  <ion-item>205</ion-item>
+	  <ion-item>206</ion-item>
+		<ion-list-header>
+	    Torre 2
+	  </ion-list-header>
+		<ion-item>101</ion-item>
+	  <ion-item>102</ion-item>
+	  <ion-item>103</ion-item>
+		<ion-item>104</ion-item>
+	  <ion-item>105</ion-item>
+	  <ion-item>106</ion-item>
+		<ion-item>201</ion-item>
+	  <ion-item>202</ion-item>
+	  <ion-item>203</ion-item>
+		<ion-item>204</ion-item>
+	  <ion-item>205</ion-item>
+	  <ion-item>206</ion-item>
+		<ion-list-header>
+	    Torre 3
+	  </ion-list-header>
+		<ion-item>101</ion-item>
+	  <ion-item>102</ion-item>
+	  <ion-item>103</ion-item>
+		<ion-item>104</ion-item>
+	  <ion-item>105</ion-item>
+	  <ion-item>106</ion-item>
+		<ion-item>201</ion-item>
+	  <ion-item>202</ion-item>
+	  <ion-item>203</ion-item>
+		<ion-item>204</ion-item>
+	  <ion-item>205</ion-item>
+	  <ion-item>206</ion-item>
+		<ion-list-header>
+	    Torre 4
+	  </ion-list-header>
+		<ion-item>101</ion-item>
+		<ion-item>102</ion-item>
+		<ion-item>103</ion-item>
+		<ion-item>104</ion-item>
+		<ion-item>105</ion-item>
+		<ion-item>106</ion-item>
+		<ion-item>201</ion-item>
+		<ion-item>202</ion-item>
+		<ion-item>203</ion-item>
+		<ion-item>204</ion-item>
+		<ion-item>205</ion-item>
+		<ion-item>206</ion-item>
+	</ion-list>
 	<ion-list class="chat-list">
 		<ion-item (click)="chat(chatItem.id)" class="item-remove-animate item-avatar item-icon-right online" *ngFor="let chatItem of chatService.chats" type="item-text-wrap">
 			<ion-avatar item-left>

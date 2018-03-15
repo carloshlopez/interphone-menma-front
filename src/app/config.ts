@@ -54,5 +54,5 @@ export class Config {
 	public static attachments = false;
 
 	// whether or enable markdown parsing client side
-	public static markdown = true;
+	public static markdown = false;
 }
